@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
-  /* Base Styles */
+  /* Navbar Base Styles */
   :root {
     --primary-color: #2563eb;
     --text-color: #1f2937;
@@ -155,7 +155,7 @@
     }
   }
 
-  /* Reset and Base Styles */
+  /* Banner Reset and Base Styles */
   * {
     margin: 0;
     padding: 0;
@@ -246,7 +246,7 @@
     }
   }
 
-  /* Base Styles */
+  /* Plants Section Base Styles */
   * {
     margin: 0;
     padding: 0;
@@ -373,7 +373,7 @@
     }
   }
 
-  /* Base Styles */
+  /* Plants Lover Section Base Styles */
   * {
     margin: 0;
     padding: 0;
@@ -385,88 +385,102 @@
     background-color: #ffffff;
   }
 
-  /* Plants Lover Section */
-  .plants-lover {
-    display: flex;
-    align-items: center;
+  /* Section Container */
+  .plants-lover-section {
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 20px;
+    display: flex;
+    /* align-items: center; */
     gap: 60px;
+
   }
 
   /* Image Section */
   .plants-image {
     flex: 1;
+    position: relative;
   }
 
   .plants-image img {
+    /* width: 100%; */
+    /* height: auto; */
+    /* border-radius: 12px; */
+    /* object-fit: cover; */
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); */
+  }
+
+  .plants-ima {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    object-fit: cover;
   }
+
+  /* Trusted Badge */
+  .trusted-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    /* Adjust based on your badge size */
+    height: auto;
+    transform: translate(45%, -45%);
+    /* Slightly overlaps the corner */
+    z-index: 2;
+  }
+
+
 
   /* Content Section */
   .plants-content {
     flex: 1;
   }
 
-  .section-subtitle {
-    font-size: 1rem;
-    color: #48bb78;
-    font-weight: 600;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  .section-title {
+  .plants-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 20px;
+    color: #2a2a2a;
+    /* margin-bottom: 25px; */
     line-height: 1.2;
+    margin-top: 70px;
+    padding: 15px;
   }
 
-  .plants-list {
-    list-style-type: none;
-    margin-bottom: 30px;
+
+
+  .plants-features {
+    /* list-style-type: none; */
+    padding: 40px;
   }
 
-  .plants-list li {
-    position: relative;
-    padding-left: 28px;
-    margin-bottom: 12px;
-    color: #4a5568;
+  .plants-features li {
+    /* position: relative; */
+    /* padding-left: 30px; */
+    margin-bottom: 40px;
+    color: #444444;
     font-size: 1.05rem;
     line-height: 1.6;
+
   }
 
-  .plants-list li::before {
+  /* .plants-features li::before {
     content: "";
     position: absolute;
     left: 0;
     top: 10px;
-    width: 12px;
+    width: 16px;
     height: 2px;
-    background-color: #48bb78;
-  }
-
-  .highlight-text {
-    font-size: 1.1rem;
-    color: #4a5568;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-style: italic;
-  }
+    background-color: #4CAF50;
+  } */
 
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
-    .plants-lover {
+    .plants-lover-section {
       flex-direction: column;
-      padding: 50px 20px;
-      gap: 30px;
+      /* padding: 50px 20px; */
+      /* gap: 40px; */
+      gap: 0%;
+      justify-items: left;
+
     }
 
     .plants-image {
@@ -474,14 +488,34 @@
       width: 100%;
     }
 
-    .section-title {
-      font-size: 2rem;
+    .trusted-badge {
+      display: none;
+      /* Hide badge on mobile */
     }
 
-    .plants-list li {
+    .plants-title {
+      font-size: 2rem;
+      margin-top: 0%;
+      margin-bottom: 0%;
+      justify-content: left;
+      gap: 0%;
+
+
+    }
+
+    .plants-title br {
+      display: none;
+    }
+
+    .plants-description {
       font-size: 1rem;
     }
-  }
+
+    .plants-features li {
+      font-size: 1rem;
+      /* padding-left: 25px; */
+
+    }
 </style>
 <!-- Using Heroicons via CDN for cart icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -612,6 +646,26 @@
             <button class="add-to-cart">Add to Cart</button>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="plants-lover-section">
+      <div class="plants-image">
+        <img src="B12A02-Responsive-Flowers/assets/flower-store.png" class="plants-ima">
+        <!-- Trusted badge as image -->
+        <img src="B12A02-Responsive-Flowers/assets/trusted-badge.png" class="trusted-badge">
+      </div>
+
+      <div class="plants-content">
+        <!-- <p class="plants-subtitle"></p> -->
+        <h2 class="plants-title">Flower & Plants <br>Lover</h2>
+        <ul class="plants-features">
+          <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic
+            blooms, we offer a wide variety of fresh.</li>
+          <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic
+            blooms, we offer a wide variety of fresh.</li>
+          <li>Indulge your senses with the beauty and fragrance of our fresh flower shop. From classic roses to exotic
+            blooms, we offer a wide variety of fresh.</li>
+        </ul>
       </div>
     </section>
 
